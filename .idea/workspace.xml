@@ -236,7 +236,7 @@
       <workItem from="1519352772092" duration="3249000" />
       <workItem from="1519364456426" duration="557000" />
       <workItem from="1519372142080" duration="16810000" />
-      <workItem from="1519436298426" duration="675000" />
+      <workItem from="1519436298426" duration="917000" />
     </task>
     <task id="LOCAL-00001" summary="完成选项点击、修改readme">
       <created>1519436769291</created>
@@ -249,7 +249,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46079000" />
+    <option name="totallyTimeSpent" value="46321000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
