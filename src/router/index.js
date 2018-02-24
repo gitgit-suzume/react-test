@@ -1,8 +1,8 @@
 import React,{ Component } from 'react'
-import { Router, Route, hashHistory } from 'react-router'
+import { Route, hashHistory } from 'react-router'
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
-import Page1 from '../pages/page1'
-import Page2 from '../pages/page2'
+import Page1 from '../pages/paper/Paper'
+import Page2 from '../pages/exam'
 
 export default class Route extends Component{
     constructor(){

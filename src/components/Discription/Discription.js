@@ -1,19 +1,19 @@
 import React,{ Component } from 'react'
-import './Discription.css'
+import './Discription.less'
 
 class Discription extends Component{
-    constructor(props){
-        super(pros);
+    constructor(){
+        super();
         this.state={
-            discription:'题目一',
+            discription:'题目一题目一题目一题目一题目一题目一题目一题目一题目一题目一题目一',
             type: '单选题'
         }
     }
     render(){
         return (
             <div className="discription">
-                <span>({this.state.type})</span>
-                <span>{this.state.discription}</span>
+                <span className="type">({this.state.type})</span>
+                <span className="title-discription">{this.state.discription}</span>
             </div>
         )
     }

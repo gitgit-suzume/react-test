@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import './Header.css';
+import './Header.less';
 
 class Header extends Component {
     constructor(){
         super()
         this.state={
-            val: 233333
+            paperName: '练习题名称',
+            testCount: 10,
+            curIndex: 1
         }
     }
   render() {
     return (
-      <div className="Header">
-          {this.state.val}
+      <div className="header">
+          <h6>{this.state.paperName}</h6>
+          <span>{this.state.curIndex}/{this.state.testCount}</span>
       </div>
     );
   }

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Route from './router/'
-import Header from './components/Header/Header';
+import './style/init.css'
+import Exam from './pages/exam';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Header />, document.getElementById('root'));
+ReactDOM.render(<Exam />, document.getElementById('root'));
 
 registerServiceWorker();

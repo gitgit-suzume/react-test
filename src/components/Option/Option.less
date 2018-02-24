@@ -1,0 +1,43 @@
+@import "../../style/mixin.less";
+
+.option{
+  margin-top: 8.76vw;
+  label{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 0 7.01vw 0;
+    padding: 1vw 0;
+    transition: background .5s;
+    input{
+      display: none;
+    }
+    .item{
+      margin:0 3.33vw 0 @margin-left;
+      color: black;
+      display: inline-block;
+      width: 8.76vw;
+      height: 8.76vw;
+      line-height: 8.76vw;
+      border: 1px solid black;
+      text-align: center;
+    }
+    .single{
+      border-radius: 50% 50%;
+    }
+    .plural {
+      border-radius: 2vw 2vw;
+    }
+    .checked{
+      color: @green;
+      border-color: @green;
+    }
+    .discription{
+      display: inline-block;
+      max-width: 73.03vw;
+    }
+  }
+  label:active{
+    background: rgba(0, 0, 0, .05)
+  }
+}
