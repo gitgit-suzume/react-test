@@ -42,6 +42,9 @@ a{
     /*ios禁止页面在新窗口打开*/
     -webkit-touch-callout:none;
 }
+a:hover{
+    text-decoration: none;
+}
 body{
     background-color: white;
 }
@@ -62,4 +65,7 @@ html,body{
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap
+}
+#root{
+    height: 100%;
 }
