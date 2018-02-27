@@ -4,7 +4,8 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
-    margin: 5vw 0;
+    margin: 5.95vw 0;
+    font-size: @result-font-size;
     li{
       width: 9.81vw;
       height: 9.81vw;
@@ -19,12 +20,16 @@
         text-align: center;
       }
     }
+    .pushed {
+      color: white;
+    }
     .error{
       border-color: red;
       background: red;
-      a {
-        color :white;
-      }
+    }
+    .correct{
+      background: @green;
+      border-color: @green;
     }
   }
 }

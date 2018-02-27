@@ -5,7 +5,7 @@ class Foot extends Component{
     constructor(){
         super()
         this.state = {
-            index: 9,
+            index: 1,
             kind: 'done',
             len: 10
         }
@@ -25,11 +25,11 @@ class Foot extends Component{
             //是结果分析报告
             arr = ['全部解析']
         }
-        console.log(arr)
         result = arr.map((val, i) => {
             return (
                 <a href="javascript:;"
                    key = {i}
+                   onClick={this.test}
                    type="button">
                     {val}
                     </a>

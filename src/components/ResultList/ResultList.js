@@ -29,9 +29,6 @@ class ResultList extends Component{
                 temp = []
             }
         }
-        for(let i of result){
-            console.log(i)
-        }
         return result
     }
     render(){
