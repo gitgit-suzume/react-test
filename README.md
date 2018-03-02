@@ -26,15 +26,18 @@ npm start
 redux是为了让state的变化变得可预测。
 
 > 三大原则
+
     * 单一数据源state
     * state只读，修改必须提交dispatch，集中化处理
     * action中修改必须为纯函数，就是函数中不能修改外面的值。redux设想开发者永远不会变动数据，只能将变动结果通过return返回
 
 > action
+
 描述发生了发生了什么，并将数据从应用传到store。
 * 尽量在action中传递更少量的数据
 
 > state
+
     Redux应用中，所有state都被保存在一个单一对象
     ##### 注意：
     * 建议尽量把不同类型的数据分开。
@@ -42,6 +45,7 @@ redux是为了让state的变化变得可预测。
     * 尽可能把state规范化，不存在嵌套
 
 > reducer
+
 根据action更新state
     ##### 注意：
     保证reducer的纯净——单纯执行计算。传入相同操作，返回相同的值。并且没有副作用、api请求、变量修改。

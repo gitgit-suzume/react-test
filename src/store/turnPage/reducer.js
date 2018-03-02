@@ -1,15 +1,19 @@
 import * as actionType from './action-type.js'
 
-let defaultIndex = 0
-export const turnPage = (curIndex = defaultIndex, action = {}) => {
+let defaultState = {
+    curIdx: 0
+}
+export const turnPage = (state = defaultState, action = {}) => {
+    let curIdx = state.curIdx
     switch (action.type){
         case actionType.NEXTTILE:
-            return curIndex + 1;
+            return Object.assign({}, state, {curIdx: curIdx + 1})
         case actionType.LASTTILE:
-            return curIndex - 1;
+            console.log('last')
+            return Object.assign({}, state, {curIdx: curIdx - 1})
         case actionType.SOMETITLE:
         default:
-            return curIndex;
+            return state;
     }
 }
 

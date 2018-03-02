@@ -1,4 +1,7 @@
 import React,{ Component } from 'react'
+import {connect} from 'react-redux'
+import {lastTitle, nextTitle} from '../../store/turnPage/action'
+import {NEXTTILE, LASTTILE} from '../../store/turnPage/action-type'
 import './Foot.less'
 
 class Foot extends Component{
@@ -10,36 +13,54 @@ class Foot extends Component{
             len: 10
         }
     }
-    render(){
-        let result, arr = []
-        //不是分析结果报告
-        if(this.state.kind !== 'result') {
-            if (this.state.index === 0) {
-                arr = ['无', '下一题']
-            } else if (this.state.index >= this.state.len - 1) {
-                arr = ['提交并查看结果']
-            } else {
-                arr = ['上一题', '下一题']
-            }
-        } else {
-            //是结果分析报告
-            arr = ['全部解析']
+    handleClick = (type) => {
+        switch (type){
+            case LASTTILE:
+                this.props.lastTitle(this.props.turnPage, {type: type});
+            case NEXTTILE:
+                if(this.props.index >= this.props.len - 1){
+                    this.props.history
+                } else {
+                    this.props.nextTitle(this.props.turnPage, {type: type});
+                }
         }
-        result = arr.map((val, i) => {
-            return (
-                <a href="javascript:;"
-                   key = {i}
-                   onClick={this.test}
-                   type="button">
-                    {val}
-                    </a>
-            )
-        })
+    }
+    render(){
+        let arr
+        if(this.state.kind !== 'result') {
+            if (this.props.index === 0) {
+                arr = [
+                    <a href="javascript:;"
+                       key='none'>无</a>,
+                    <a href="javascript:;"
+                       onClick={() => this.handleClick(NEXTTILE)}
+                       key='next'>下一题</a>
+                ]
+            } else if (this.props.index >= this.props.len) {
+                arr = [<a href="javascript:;" key='submit'>提交并查看结果</a>]
+            } else {
+                arr = [
+                    <a href="javascript:;"
+                       onClick={() => this.handleClick(LASTTILE)}
+                       key='last'>上一题</a>,
+                    <a href="javascript:;"
+                       onClick={() => this.handleClick(NEXTTILE)}
+                       key='next'>下一题</a>
+                ]
+            }
+        }
         return(
             <div className="foot">
-                {result}
+                {arr}
             </div>
         )
     }
 }
-export default Foot
+export default connect((state) => ({
+    turnPage: state.turnPage,
+    index: state.turnPage.curIdx,
+    len: state.allExams.exams.length
+}),{
+    lastTitle,
+    nextTitle
+})(Foot)

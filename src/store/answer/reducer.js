@@ -1,10 +1,17 @@
 import * as actionType from './action-type'
 
-export const answer = (newAnswer = [], answer=[], action = {}) => {
+let defaultState = {
+    answerList: [],
+}
+
+export const answer = (state=defaultState, action = {}, ... rest) => {
     switch (action.type){
-        case actionType.PUSHONE:
-            return [...answer, newAnswer];
+        case actionType.SELECTANSWER:
+            let temp = state.answerList.slice()
+            temp[action.curIdx] = action.index
+            return {...state, ...{answerList: temp}}
+            // return state.answerList.splice(index, 1, userOptionAnswer)
         default:
-            return answer;
+            return state;
     }
 }

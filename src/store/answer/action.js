@@ -1,12 +1,9 @@
 import * as actionType from './action-type'
 
-/*
-* answer= [[], [], []]
-* */
-export const pushOne = (newAnswer, answer) => {
+export const selectAnswer = (index, curIdx) => {
     return {
-        type: actionType.PUSHONE,
-        newAnswer,
-        answer
+        type: actionType.SELECTANSWER,
+        index,
+        curIdx
     }
 }

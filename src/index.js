@@ -8,6 +8,7 @@ import store from './store/store'
 import './index.less'
 import './style/init.css'
 
+
 const render = Component => {
     ReactDOM.render(
         <Provider store={store}>
@@ -19,6 +20,9 @@ const render = Component => {
         , document.getElementById('root')
     )
 }
+store.subscribe(() => {
+    render(Route)
+})
 render(Route)
 
 

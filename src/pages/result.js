@@ -2,6 +2,7 @@ import React,{ Component } from 'react'
 import List from '../components/ResultList/ResultList'
 import ResultHeadPush from '../components/ResultHeadPush/ResultHeadPush'
 import ResultHeadPushed from '../components/ResultHeadPushed/ResultHeadPushed'
+
 class ResultList extends Component{
     constructor(props){
         super(props)
@@ -12,6 +13,7 @@ class ResultList extends Component{
         }
     }
     render(){
+        console.log(23333, this.props)
         let ResultHead = !this.state.hasPush ? ResultHeadPushed : ResultHeadPush
         return(
             <div className="exam-list">
