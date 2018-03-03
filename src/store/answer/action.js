@@ -7,3 +7,8 @@ export const selectAnswer = (index, curIdx) => {
         curIdx
     }
 }
+export const pushAnswer = () => {
+    return {
+        type: actionType.PUSHANSWER
+    }
+}

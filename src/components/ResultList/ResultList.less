@@ -20,16 +20,25 @@
         text-align: center;
       }
     }
-    .pushed {
-      color: white;
+    .selected{
+      border-color: @green;
+      a{
+        color: @green;
+      }
     }
     .error{
       border-color: red;
       background: red;
+      a{
+        color: white;
+      }
     }
     .correct{
       background: @green;
       border-color: @green;
+      a{
+        color: white;
+      }
     }
   }
 }

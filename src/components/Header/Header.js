@@ -6,14 +6,13 @@ class Header extends Component {
         super()
         this.state={
             paperName: '练习题名称',
-            testCount: 10,
         }
     }
     render() {
         return (
           <div className="header">
               <h6>{this.state.paperName}</h6>
-              <span>{this.props.index + 1}/{this.state.testCount}</span>
+              <span>{this.props.index + 1}/{this.props.examsLen}</span>
           </div>
         );
     }

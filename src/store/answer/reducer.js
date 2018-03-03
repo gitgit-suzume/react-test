@@ -2,6 +2,7 @@ import * as actionType from './action-type'
 
 let defaultState = {
     answerList: [],
+    hasPush: false
 }
 
 export const answer = (state=defaultState, action = {}, ... rest) => {
@@ -10,7 +11,8 @@ export const answer = (state=defaultState, action = {}, ... rest) => {
             let temp = state.answerList.slice()
             temp[action.curIdx] = action.index
             return {...state, ...{answerList: temp}}
-            // return state.answerList.splice(index, 1, userOptionAnswer)
+        case actionType.PUSHANSWER:
+            return {...state, ...{hasPush: true}}
         default:
             return state;
     }

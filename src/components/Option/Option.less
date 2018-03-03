@@ -23,15 +23,32 @@
       text-align: center;
       border-radius: 50% 50%;
     }
-    .checked{
-      color: @green;
-      border-color: @green;
-    }
     .discription{
       display: inline-block;
       max-width: 73.03vw;
     }
   }
+  .selected-item{
+    span{
+      color: @green;
+      border-color: @green;
+    }
+  }
+  .error-item{
+    .option-item {
+      background: red;
+      color: white;
+      border-color: red;
+    }
+  }
+  .correct-item{
+    .option-item{
+      background: @green;
+      border-color: @green;
+      color: white;
+    }
+  }
+
   label:active{
     background: rgba(0, 0, 0, .05)
   }

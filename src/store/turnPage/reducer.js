@@ -7,11 +7,15 @@ export const turnPage = (state = defaultState, action = {}) => {
     let curIdx = state.curIdx
     switch (action.type){
         case actionType.NEXTTILE:
-            return Object.assign({}, state, {curIdx: curIdx + 1})
+            if(curIdx + 1 === action.examsLen){
+                action.history.push('/result')
+            }
+            return {...state, ...{curIdx: curIdx + 1}}
         case actionType.LASTTILE:
-            console.log('last')
-            return Object.assign({}, state, {curIdx: curIdx - 1})
+            return {...state, ...{curIdx: curIdx - 1}}
         case actionType.SOMETITLE:
+            action.history.push('/exam')
+            return {...state, ...{curIdx: action.index}}
         default:
             return state;
     }

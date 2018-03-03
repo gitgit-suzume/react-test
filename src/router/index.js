@@ -8,7 +8,7 @@ export default class RouteConfig extends Component{
         return(
             <HashRouter>
                 <Switch>
-                    <Route path="/result/:hasPush" component={Result}></Route>
+                    <Route path="/result" component={Result}></Route>
                     <Route path="/exam" component={Exam}></Route>
                     <Redirect to="/exam"></Redirect>
                 </Switch>

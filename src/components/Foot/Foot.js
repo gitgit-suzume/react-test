@@ -2,7 +2,9 @@ import React,{ Component } from 'react'
 import {connect} from 'react-redux'
 import {lastTitle, nextTitle} from '../../store/turnPage/action'
 import {NEXTTILE, LASTTILE} from '../../store/turnPage/action-type'
+import {pushAnswer} from '../../store/answer/action'
 import './Foot.less'
+import PropTypes from 'prop-types'
 
 class Foot extends Component{
     constructor(){
@@ -13,21 +15,24 @@ class Foot extends Component{
             len: 10
         }
     }
+    static contextTypes = {
+        router: PropTypes.object.isRequired
+    }
     handleClick = (type) => {
         switch (type){
             case LASTTILE:
-                this.props.lastTitle(this.props.turnPage, {type: type});
+                this.props.lastTitle({type: type});
+                break;
             case NEXTTILE:
-                if(this.props.index >= this.props.len - 1){
-                    this.props.history
-                } else {
-                    this.props.nextTitle(this.props.turnPage, {type: type});
-                }
+                this.props.nextTitle(this.props.len, this.context.router.history);
         }
+    }
+    pushAnswer = () => {
+        this.props.pushAnswer()
     }
     render(){
         let arr
-        if(this.state.kind !== 'result') {
+        // if(!this.props.hasPush) {
             if (this.props.index === 0) {
                 arr = [
                     <a href="javascript:;"
@@ -37,7 +42,9 @@ class Foot extends Component{
                        key='next'>下一题</a>
                 ]
             } else if (this.props.index >= this.props.len) {
-                arr = [<a href="javascript:;" key='submit'>提交并查看结果</a>]
+                arr = [<a href="javascript:;"
+                          onClick={this.pushAnswer}
+                          key='submit'>提交并查看结果</a>]
             } else {
                 arr = [
                     <a href="javascript:;"
@@ -48,11 +55,14 @@ class Foot extends Component{
                        key='next'>下一题</a>
                 ]
             }
-        }
         return(
-            <div className="foot">
-                {arr}
-            </div>
+            <ul className="foot">
+                {arr.map((val, index) => {
+                    return (
+                        <li key={index}>{val}</li>
+                    )
+                })}
+            </ul>
         )
     }
 }
@@ -62,5 +72,6 @@ export default connect((state) => ({
     len: state.allExams.exams.length
 }),{
     lastTitle,
-    nextTitle
+    nextTitle,
+    pushAnswer
 })(Foot)

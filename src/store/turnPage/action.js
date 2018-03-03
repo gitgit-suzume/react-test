@@ -1,20 +1,21 @@
 import * as actionType from './action-type'
 
-export const lastTitle = state => {
+export const lastTitle = () => {
     return {
         type: actionType.LASTTILE,
-        state
     }
 }
-export const nextTitle = state => {
+export const nextTitle = (examsLen, history) => {
     return {
         type: actionType.NEXTTILE,
-        state
+        examsLen,
+        history,
     }
 }
-export const someTitle = state => {
+export const someTitle = (index, history) => {
     return {
         type: actionType.SOMETITLE,
-        state
+        index,
+        history
     }
 }

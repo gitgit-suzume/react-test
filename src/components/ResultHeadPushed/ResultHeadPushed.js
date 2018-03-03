@@ -7,7 +7,6 @@ class ResultHeadPushed extends Component{
         allCount: 10
     }
     render(){
-        console.log(this.props)
         return (
             <div className="result-head-pushed">
                 <span className="title">
