@@ -25,6 +25,10 @@ class Option extends Component{
             }
         }
     }
+    selectAnswer(index){
+            this.props.onOptionClick(index);
+            this.autoNext()
+    }
     render(){
         let optionItems = this.props.examOption.map((val, index) => {
             let ch = String.fromCharCode('A'.charCodeAt(0) + index)
@@ -32,11 +36,12 @@ class Option extends Component{
             return (
                 <a className={aClassName}
                    key={index}>
-                    <label className='single-option'
+                    <label className={`single-option ${this.props.hasPush ? '': 'label-hover'}`}
                        htmlFor={'option-' + index}>
                         <input type="radio"
                                id={'option-' + index}
-                               onChange={() => {this.props.onOptionClick(index); this.autoNext()}}
+                               disabled={this.props.hasPush}
+                               onChange={() => {this.selectAnswer(index)}}
                                checked={this.props.originAnswer === index}
                                value={ch}/>
                         {/*<span className={`item ${(this.props.originAnswer === index) ? 'checked' : ''}`}>{ch}</span>*/}
