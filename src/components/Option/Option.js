@@ -39,7 +39,6 @@ class Option extends Component{
         let origin = this.optionCh(this.props.originAnswer)
         let result = ch === origin ? '正确': '错误'
         let resultClass = ch === origin ? 'correct-span': 'error-span'
-        console.log(this.props.hasPush)
         if(this.props.hasPush){
             return (
                 <div className="analysis">

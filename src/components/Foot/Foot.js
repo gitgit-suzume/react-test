@@ -30,10 +30,10 @@ class Foot extends Component{
     pushAnswer = () => {
         this.props.pushAnswer()
     }
-    render(){
+    arrList = () => {
         let arr
-        // if(!this.props.hasPush) {
-            if (this.props.index === 0) {
+        switch (this.props.index){
+            case 0:
                 arr = [
                     <a href="javascript:;"
                        key='none'>无</a>,
@@ -41,11 +41,24 @@ class Foot extends Component{
                        onClick={() => this.handleClick(NEXTTILE)}
                        key='next'>下一题</a>
                 ]
-            } else if (this.props.index >= this.props.len) {
+                break;
+            case this.props.len:
                 arr = [<a href="javascript:;"
                           onClick={this.pushAnswer}
                           key='submit'>提交并查看结果</a>]
-            } else {
+                break;
+            case this.props.len - 1:
+                if(this.props.hasPush) {
+                    arr = [
+                        <a href="javascript:;"
+                           onClick={() => this.handleClick(LASTTILE)}
+                           key='none'>上一题</a>,
+                        <a href="javascript:;"
+                           key='next'>无</a>
+                    ]
+                    break;
+                }
+            default:
                 arr = [
                     <a href="javascript:;"
                        onClick={() => this.handleClick(LASTTILE)}
@@ -54,7 +67,20 @@ class Foot extends Component{
                        onClick={() => this.handleClick(NEXTTILE)}
                        key='next'>下一题</a>
                 ]
-            }
+        }
+        return arr
+    }
+    isInResult = () => {
+        if(this.props.inResult){
+            return [<a href="javascript:;"
+                       onClick={this.pushAnswer}
+                       key='submit'>提交并查看结果</a>]
+        } else {
+            return this.arrList()
+        }
+    }
+    render(){
+        let arr = this.isInResult()
         return(
             <ul className="foot">
                 {arr.map((val, index) => {

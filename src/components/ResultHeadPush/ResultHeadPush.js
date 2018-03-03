@@ -3,8 +3,17 @@ import './ResultHeadPush.less'
 
 class ResultHeadPush extends Component{
     static defaultProps = {
-        finish: 0,
-        count: 10
+        answer: new Array(10),
+        allExams: new Array(10)
+    }
+    finishExams = () => {
+        let count = 0
+        for(let i of this.props.answer){
+            if(i !== undefined){
+                count ++
+            }
+        }
+        return count
     }
     render(){
         return (
@@ -13,7 +22,7 @@ class ResultHeadPush extends Component{
                     <span>答题卡</span>
                 </div>
                 <div className="right">
-                    已完成({this.props.finish}/{this.props.count})
+                    已完成({this.finishExams()}/{this.props.allExams.length})
                 </div>
             </div>
         )

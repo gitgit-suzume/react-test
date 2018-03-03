@@ -1,10 +1,22 @@
 import React, {Component} from 'react'
 import './ResultHeadPushed.less'
+import {answer} from "../../store/answer/reducer";
 class ResultHeadPushed extends Component{
     static defaultProps = {
         name: '练习题名称',
-        rightCount: 0,
-        allCount: 10
+        allExams: new Array(10),
+        answer:[]
+    }
+    correctCount = () => {
+        let count = 0
+        if(this.props.answer.length !== 0) {
+            for (let i in this.props.answer) {
+                if (this.props.answer[i] == this.props.allExams[i].answer) {
+                    count++
+                }
+            }
+        }
+        return count
     }
     render(){
         return (
@@ -13,8 +25,8 @@ class ResultHeadPushed extends Component{
                     {this.props.name}
                 </span>
                 <br/>
-                <span className="analysis">
-                    正确{this.props.rightCount}/{this.props.allCount}
+                <span className="correct-count">
+                    正确{this.correctCount()}/{this.props.allExams.length}
                 </span>
             </div>
         )

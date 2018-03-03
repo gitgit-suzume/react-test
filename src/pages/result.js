@@ -18,7 +18,8 @@ class ResultList extends Component{
         let ResultHead = this.props.hasPush ? ResultHeadPushed : ResultHeadPush
         return(
             <div className="exam-list">
-                <ResultHead></ResultHead>
+                <ResultHead allExams={this.props.allExams}
+                            answer={this.props.answer}></ResultHead>
                 <List groupCount={this.state.groupCount}
                       someTitle={this.props.someTitle}
                       answer={this.props.answer}
@@ -26,7 +27,7 @@ class ResultList extends Component{
                       hasPush={this.props.hasPush}
                       len={this.props.len}>
                 </List>
-                {!this.props.hasPush ? <Foot></Foot> : ''}
+                {!this.props.hasPush ? <Foot inResult={true}></Foot> : ''}
             </div>
         )
     }
