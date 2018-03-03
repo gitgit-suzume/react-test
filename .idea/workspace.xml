@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc50c3b5-f695-472a-9a33-bdcba91722cd" name="Default" comment="增加">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/components/Option/Option.js" afterPath="$PROJECT_DIR$/src/components/Option/Option.js" />
       <change beforePath="$PROJECT_DIR$/src/components/Option/Option.less" afterPath="$PROJECT_DIR$/src/components/Option/Option.less" />
+      <change beforePath="$PROJECT_DIR$/src/pages/exam.js" afterPath="$PROJECT_DIR$/src/pages/exam.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +25,8 @@
       <file leaf-file-name="exam.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/exam.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
-              <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="298">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -35,9 +37,13 @@
       <file leaf-file-name="Option.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Option/Option.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="39" column="51" lean-forward="true" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="631">
+              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+              <folding>
+                <element signature="n#!!block;n#constructor#0;n#Option#0" expanded="false" />
+                <element signature="e#198#249#0" expanded="false" />
+                <element signature="e#271#356#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,8 +51,8 @@
       <file leaf-file-name="Option.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Option/Option.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="14" />
+            <state relative-caret-position="310">
+              <caret line="57" column="21" lean-forward="false" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
               <folding>
                 <element signature="e#612#682#0" expanded="false" />
               </folding>
@@ -204,16 +210,6 @@
             <path>
               <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-test" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-test" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -221,13 +217,6 @@
               <item name="react-test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Foot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
@@ -235,46 +224,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Option" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ResultList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="allExams" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="answer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="turnPage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -343,7 +292,7 @@
       <workItem from="1519956909805" duration="16227000" />
       <workItem from="1519978436021" duration="16639000" />
       <workItem from="1520029068764" duration="4889000" />
-      <workItem from="1520060214406" duration="19694000" />
+      <workItem from="1520060214406" duration="20677000" />
     </task>
     <task id="LOCAL-00001" summary="完成选项点击、修改readme">
       <created>1519436769291</created>
@@ -356,7 +305,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141638000" />
+    <option name="totallyTimeSpent" value="142621000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,7 +329,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3160323" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3160323" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -781,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/exam.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="298">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -791,8 +740,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Option/Option.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="14" />
+        <state relative-caret-position="310">
+          <caret line="57" column="21" lean-forward="false" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
           <folding>
             <element signature="e#612#682#0" expanded="false" />
           </folding>
@@ -801,9 +750,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Option/Option.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="39" column="51" lean-forward="true" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="631">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#Option#0" expanded="false" />
+            <element signature="e#198#249#0" expanded="false" />
+            <element signature="e#271#356#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

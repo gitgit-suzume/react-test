@@ -25,13 +25,35 @@ class Option extends Component{
             }
         }
     }
-    selectAnswer(index){
-            this.props.onOptionClick(index);
-            this.autoNext()
+    selectAnswer(index) {
+        this.props.onOptionClick(index);
+        this.autoNext()
+    }
+    optionCh(index){
+        if(index !== undefined) {
+            return String.fromCharCode('A'.charCodeAt(0) + index)
+        }
+    }
+    analysis = () => {
+        let ch = this.optionCh(this.props.correctAnswer)
+        let origin = this.optionCh(this.props.originAnswer)
+        let result = ch === origin ? '正确': '错误'
+        let resultClass = ch === origin ? 'correct-span': 'error-span'
+        console.log(this.props.hasPush)
+        if(this.props.hasPush){
+            return (
+                <div className="analysis">
+                    <span className="normal">正确答案:</span>
+                    <span className="correct-span">{ch}</span>
+                    <span className="normal">你的答案:</span>
+                    <span className={resultClass}>{origin}({result})</span>
+                </div>
+            )
+        }
     }
     render(){
         let optionItems = this.props.examOption.map((val, index) => {
-            let ch = String.fromCharCode('A'.charCodeAt(0) + index)
+            let ch = this.optionCh(index)
             let aClassName = this.aClassName(index)
             return (
                 <a className={aClassName}
@@ -44,8 +66,6 @@ class Option extends Component{
                                onChange={() => {this.selectAnswer(index)}}
                                checked={this.props.originAnswer === index}
                                value={ch}/>
-                        {/*<span className={`item ${(this.props.originAnswer === index) ? 'checked' : ''}`}>{ch}</span>*/}
-                        {/*<span className={`discription ${(this.props.originAnswer === index) ? 'checked' : ''}`}>{val}</span>*/}
                         <span className={`item option-item`}>{ch}</span>
                         <span>{val}</span>
                     </label>
@@ -55,6 +75,7 @@ class Option extends Component{
         return(
             <div className="option">
                 {optionItems}
+                {this.analysis()}
             </div>
         )
     }

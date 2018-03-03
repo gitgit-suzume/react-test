@@ -29,7 +29,7 @@ class Exam extends Component{
                          autoNext={this.props.autoNext}
                          examOption={this.props.allExams.exams[index].option}
                          onOptionClick={this.onOptionClick}/>
-                {!this.props.hasPush ? <Foot></Foot> : ''}
+                {!this.props.answer.hasPush ? <Foot></Foot> : ''}
             </div>
         )
     }
