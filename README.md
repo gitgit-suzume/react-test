@@ -37,7 +37,7 @@ npm start
 答题卡
 ![Alt text](/forReadMe/答题卡.png "答题卡")
 提交答题卡后结果分析
-![Alt text](/forReadMe/提交答题卡后结果分析.png "提交答题卡后结果分析")
+![Alt text](/forReadMe/答题卡结果分析.png "提交答题卡后结果分析")
 查看详细做题情况
 ![Alt text](/forReadMe/查看做题详情.png "查看详细做题情况")
 
