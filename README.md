@@ -32,13 +32,16 @@ npm start
 * 提交后，题目显示对错信息
 
 ## 项目页面概览
-做题页面
+* 做题页面
 ![Alt text](/forReadMe/选择题.png "选择题")
-答题卡
+
+* 答题卡
 ![Alt text](/forReadMe/答题卡.png "答题卡")
-提交答题卡后结果分析
+
+* 提交答题卡后结果分析
 ![Alt text](/forReadMe/答题卡结果分析.png "提交答题卡后结果分析")
-查看详细做题情况
+
+* 查看详细做题情况
 ![Alt text](/forReadMe/查看做题详情.png "查看详细做题情况")
 
 
